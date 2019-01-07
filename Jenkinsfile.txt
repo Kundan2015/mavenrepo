@@ -14,5 +14,12 @@ pipeline {
 				git 'https://github.com/Kundan2015/mavenrepo.git'
 			}
 		}
+		stage('Buld the code') {
+			steps {
+				bat '''
+					mvn clean install
+				'''
+			}
+		}
 	}
 }
