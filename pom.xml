@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdevs</groupId>
   <artifactId>studentapp</artifactId>
-  <version>2.5-SNAPSHOT</version>
+  <version>2.5</version>
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -26,16 +26,40 @@
     </plugins>
   </build>
    <distributionManagement>
-        <repository>
+   
+   	 <!-- NexusRepo Configuration -->
+       <!--  
+       	<repository>
             <id>deployment</id>
             <name>Internal Releases</name>
             <url>http://localhost:8081/nexus/content/repositories/student-rel/</url>
         </repository>
+        
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
             <url>http://localhost:8081/nexus/content/repositories/student-snap/</url>
         </snapshotRepository>
+        
+        -->
+        
+        <!-- JFrogRepo -->
+                 
+        <snapshotRepository>
+        	<id>snapshots</id>
+        	<name>SYNPS6144348-snapshots</name>
+        	<url>http://10.119.116.89:8040/artifactory/libs-snapshot</url>
+    	</snapshotRepository>
+        
+        <repository>
+        	<id>central</id>
+        	<name>SYNPS6144348-releases</name>
+        	<url>http://10.119.116.89:8040/artifactory/libs-release</url>
+    	</repository>
+    	
+          <!-- END JFrogRepo Configuration -->
+          
+          
     </distributionManagement>
   <dependencies>
   	<dependency>
