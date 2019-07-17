@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.sql.DataSource;
+//import javax.sql.DataSource;
 
 import vo.Student;
 
